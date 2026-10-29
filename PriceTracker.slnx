@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/PriceTracker.Api/PriceTracker.Api.csproj" />
+    <Project Path="src/PriceTracker.Collector/PriceTracker.Collector.csproj" />
     <Project Path="src/PriceTracker.Domain/PriceTracker.Domain.csproj" />
     <Project Path="src/PriceTracker.Infrastructure/PriceTracker.Infrastructure.csproj" />
   </Folder>
