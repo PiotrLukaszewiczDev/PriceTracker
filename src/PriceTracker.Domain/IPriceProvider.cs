@@ -2,6 +2,6 @@
 {
     public interface IPriceProvider
     {
-        Task<PriceData> GetPriceAsync(string url);
+        Task<PriceData?> GetPriceAsync(string url);
     }
 }
