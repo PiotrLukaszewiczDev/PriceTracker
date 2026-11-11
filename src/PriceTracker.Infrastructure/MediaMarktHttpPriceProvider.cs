@@ -10,8 +10,17 @@ namespace PriceTracker.Infrastructure
             _httpClient = httpClient;
         }
 
-        public Task<PriceData?> GetPriceAsync(string url)
+        public async Task<PriceData?> GetPriceAsync(string url)
         {
+            string html;
+            try
+            {
+                html = await _httpClient.GetStringAsync(url);
+            }
+            catch (HttpRequestException)
+            {
+                return null;
+            }
             throw new NotImplementedException();
         }
     }
