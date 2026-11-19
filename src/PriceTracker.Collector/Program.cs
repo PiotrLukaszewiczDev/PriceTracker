@@ -7,6 +7,7 @@ public class Program
     public static async Task Main(string[] args)
     {
         using var httpClient = new HttpClient();
+        httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("PriceTrackerBot/1.0");
         var connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=PriceTracker;Trusted_Connection=True;TrustServerCertificate=True";
         var dbOptionsBuilder = new DbContextOptionsBuilder<PriceTrackerDbContext>();
         dbOptionsBuilder.UseSqlServer(connectionString);
