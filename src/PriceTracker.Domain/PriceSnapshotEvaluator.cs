@@ -13,6 +13,10 @@
             {
                 return Verdict.Suspicious;
             }
+            if (snapshots.Min(s => s.Price) < snapshot.DeclaredLowestPrice)
+            {
+                return Verdict.Suspicious;
+            }
             else
             {
                 return Verdict.Fair;
